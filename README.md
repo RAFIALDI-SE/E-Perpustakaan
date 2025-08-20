@@ -5,11 +5,13 @@
 ---
 
 Penjelasan Singkat Aplikasi E-Perpustakaan
+
 Aplikasi ini adalah sistem manajemen perpustakaan berbasis web yang memungkinkan pengguna untuk mengelola koleksi buku, data anggota, dan transaksi peminjaman.
 Fitur utama meliputi:
-• Manajemen Buku: Tambah, edit, dan hapus data buku.
-• Manajemen Anggota: Kelola data anggota perpustakaan.
-• Peminjaman & Pengembalian: Mencatat riwayat peminjaman buku.
+
+    • Manajemen Buku: Tambah, edit, dan hapus data buku.
+    • Manajemen Anggota: Kelola data anggota perpustakaan.
+    • Peminjaman & Pengembalian: Mencatat riwayat peminjaman buku.
 
 ---
 
