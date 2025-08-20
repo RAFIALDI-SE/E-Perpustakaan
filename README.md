@@ -19,57 +19,66 @@ Panduan Instalasi Proyek
 Ikuti langkah-langkah di bawah ini untuk menginstal dan menjalankan proyek Laravel E-Perpustakaan di komputer lokal Anda.
 
 1. Persiapan Awal
-1. Clone Repositori:
-   Buka terminal atau Command Prompt dan clone repositori dari GitHub.
-   Bash
-   git clone https://github.com/nama-pengguna/nama-repositori-perpustakaan.git
-   (Ganti URL di atas dengan link repositori yang sebenarnya)
-1. Masuk ke Direktori Proyek:
-   Pindah ke folder proyek yang baru saja Anda clone.
-   Bash
-   cd nama-repositori-perpustakaan
-1. Konfigurasi Proyek
-1. Buat File .env:
-   Salin file .env.example untuk membuat file konfigurasi .env. Jika Anda menggunakan Windows, gunakan perintah copy.
-   Bash
+   
+    1. Clone Repositori:
+       Buka terminal atau Command Prompt dan clone repositori dari GitHub.
+       
+       -        git clone https://github.com/RAFIALDI-SE/E-Perpustakaan.git
+  
+    2. Masuk ke Direktori Proyek:
+       Pindah ke folder proyek yang baru saja Anda clone.
+      
+       -        cd E-Perpustakaan
+    
+   
+2. Konfigurasi Proyek
+   
+    1. Buat File .env:
+       Salin file .env.example untuk membuat file konfigurasi .env. Jika Anda menggunakan Windows, gunakan perintah copy.
+       Bash
+    
+        # Untuk pengguna macOS/Linux
+        
+        -        cp .env.example .env
+        
+        # Untuk pengguna Windows (CMD)
+        
+        -        copy .env.example .env 
+    
+    2. Atur Database:
+    Buka file .env dengan editor teks dan atur kredensial database Anda.
+    
+            DB_CONNECTION=mysql
+            DB_HOST=127.0.0.1
+            DB_PORT=3306
+            DB_DATABASE=E-perpustakaan
+            DB_USERNAME=root
+            DB_PASSWORD=
 
-# Untuk pengguna macOS/Linux
+3. Instalasi Dependencies dan Database
 
-cp .env.example .env
-
-# Untuk pengguna Windows (CMD)
-
-copy .env.example .env 2. Atur Database:
-Buka file .env dengan editor teks dan atur kredensial database Anda.
-Ini, TOML
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=nama_database_anda
-DB_USERNAME=root
-DB_PASSWORD=
-(Pastikan DB_DATABASE, DB_USERNAME, dan DB_PASSWORD sesuai dengan pengaturan database lokal Anda.) 3. Instalasi Dependencies dan Database
-
-1. Instal Composer Dependencies:
-   Jalankan perintah ini untuk menginstal semua paket PHP yang dibutuhkan proyek.
-   Bash
-   composer install
-2. Generate Application Key:
-   Ini akan membuat kunci unik untuk aplikasi Anda yang penting untuk keamanan.
-   Bash
-   php artisan key:generate
-3. Jalankan Migrasi Database:
-   Perintah ini akan membuat semua tabel yang dibutuhkan di database Anda.
-   Bash
-   php artisan migrate
-4. Jalankan Seeder (Opsional):
-   Jika repositori menyediakan seeder untuk data awal (seperti data admin atau buku contoh), Anda bisa menjalankannya.
-   Bash
-   php artisan db:seed
-5. Jalankan Aplikasi
-   Setelah semua langkah di atas selesai, Anda bisa menjalankan server lokal Laravel.
-   Bash
-   php artisan serve
+    1. Instal Composer Dependencies:
+       Jalankan perintah ini untuk menginstal semua paket PHP yang dibutuhkan proyek.
+       
+       -        composer install
+         
+    2. Generate Application Key:
+       Ini akan membuat kunci unik untuk aplikasi Anda yang penting untuk keamanan.
+      
+       -        php artisan key:generate
+         
+    3. Jalankan Migrasi Database:
+       Perintah ini akan membuat semua tabel yang dibutuhkan di database Anda.
+     
+       -        php artisan migrate
+         
+    4. Jalankan Seeder:
+       
+       -        php artisan db:seed --class=AdminSeeder
+    5. Jalankan Aplikasi
+       Setelah semua langkah di atas selesai, Anda bisa menjalankan server lokal Laravel.
+    
+       -        php artisan serve
 
 <<<<<<< HEAD
 
