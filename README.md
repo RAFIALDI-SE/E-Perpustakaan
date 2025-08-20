@@ -1,4 +1,76 @@
+# E-Perpustakaan
+
+> > > > > > > f929152ab363fd878072740785939de9843b7dd2
+
+---
+
+Penjelasan Singkat Aplikasi E-Perpustakaan
+Aplikasi ini adalah sistem manajemen perpustakaan berbasis web yang memungkinkan pengguna untuk mengelola koleksi buku, data anggota, dan transaksi peminjaman.
+Fitur utama meliputi:
+• Manajemen Buku: Tambah, edit, dan hapus data buku.
+• Manajemen Anggota: Kelola data anggota perpustakaan.
+• Peminjaman & Pengembalian: Mencatat riwayat peminjaman buku.
+
+---
+
+Panduan Instalasi Proyek
+Ikuti langkah-langkah di bawah ini untuk menginstal dan menjalankan proyek Laravel E-Perpustakaan di komputer lokal Anda.
+
+1. Persiapan Awal
+1. Clone Repositori:
+   Buka terminal atau Command Prompt dan clone repositori dari GitHub.
+   Bash
+   git clone https://github.com/nama-pengguna/nama-repositori-perpustakaan.git
+   (Ganti URL di atas dengan link repositori yang sebenarnya)
+1. Masuk ke Direktori Proyek:
+   Pindah ke folder proyek yang baru saja Anda clone.
+   Bash
+   cd nama-repositori-perpustakaan
+1. Konfigurasi Proyek
+1. Buat File .env:
+   Salin file .env.example untuk membuat file konfigurasi .env. Jika Anda menggunakan Windows, gunakan perintah copy.
+   Bash
+
+# Untuk pengguna macOS/Linux
+
+cp .env.example .env
+
+# Untuk pengguna Windows (CMD)
+
+copy .env.example .env 2. Atur Database:
+Buka file .env dengan editor teks dan atur kredensial database Anda.
+Ini, TOML
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=nama_database_anda
+DB_USERNAME=root
+DB_PASSWORD=
+(Pastikan DB_DATABASE, DB_USERNAME, dan DB_PASSWORD sesuai dengan pengaturan database lokal Anda.) 3. Instalasi Dependencies dan Database
+
+1. Instal Composer Dependencies:
+   Jalankan perintah ini untuk menginstal semua paket PHP yang dibutuhkan proyek.
+   Bash
+   composer install
+2. Generate Application Key:
+   Ini akan membuat kunci unik untuk aplikasi Anda yang penting untuk keamanan.
+   Bash
+   php artisan key:generate
+3. Jalankan Migrasi Database:
+   Perintah ini akan membuat semua tabel yang dibutuhkan di database Anda.
+   Bash
+   php artisan migrate
+4. Jalankan Seeder (Opsional):
+   Jika repositori menyediakan seeder untuk data awal (seperti data admin atau buku contoh), Anda bisa menjalankannya.
+   Bash
+   php artisan db:seed
+5. Jalankan Aplikasi
+   Setelah semua langkah di atas selesai, Anda bisa menjalankan server lokal Laravel.
+   Bash
+   php artisan serve
+
 <<<<<<< HEAD
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
@@ -12,13 +84,13 @@
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+-   [Simple, fast routing engine](https://laravel.com/docs/routing).
+-   [Powerful dependency injection container](https://laravel.com/docs/container).
+-   Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+-   Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
+-   Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+-   [Robust background job processing](https://laravel.com/docs/queues).
+-   [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
@@ -36,19 +108,19 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 
 ### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+-   **[Vehikl](https://vehikl.com/)**
+-   **[Tighten Co.](https://tighten.co)**
+-   **[WebReinvent](https://webreinvent.com/)**
+-   **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
+-   **[64 Robots](https://64robots.com)**
+-   **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
+-   **[Cyber-Duck](https://cyber-duck.co.uk)**
+-   **[DevSquad](https://devsquad.com/hire-laravel-developers)**
+-   **[Jump24](https://jump24.co.uk)**
+-   **[Redberry](https://redberry.international/laravel/)**
+-   **[Active Logic](https://activelogic.com)**
+-   **[byte5](https://byte5.de)**
+-   **[OP.GG](https://op.gg)**
 
 ## Contributing
 
@@ -64,7 +136,4 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-=======
-# E-Perpustakaan
->>>>>>> f929152ab363fd878072740785939de9843b7dd2
+# The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
